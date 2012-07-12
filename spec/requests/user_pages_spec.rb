@@ -21,7 +21,8 @@ describe "UserPages" do
 
         it { should have_selector('title', text: 'Sign up') }
         it { should have_selector('#error_explanation') }
-        it { should have_selector('#error_explanation div.alert', text: 'The form contains') }
+        it { should have_error_message 'The form contains' }
+
         (['Name', 'Email', 'Password', 'Password confirmation']).each do |field_name|
           it { should have_selector('#error_explanation ul li', text: field_name) }
         end
@@ -47,7 +48,7 @@ describe "UserPages" do
 
         it { should have_selector('h1',    text: user.name) }
         it { should have_selector('title', text: user.name) }
-        it { should have_selector('div.alert.alert-success', text: 'Welcome') }
+        it { should have_success_message 'Welcome' }
         it { should have_link('Sign out') }
       end
 
