@@ -1,9 +1,7 @@
 common: &common
-  adapter: postgresql
-  encoding: unicode
-  pool: 5
-  username: rails_app
-
+  adapter: mysql2
+  username: root
+  host: localhost
 
 development:
   <<: *common
