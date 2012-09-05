@@ -6,8 +6,10 @@ module SessionsHelper
   end
 
   def sign_out
+    reset_session
     self.current_user = nil
     cookies.delete(:remember_token)
+    redirect_to 'https://Andy-MBP.local:3443/logout'
   end
 
   def signed_in?
