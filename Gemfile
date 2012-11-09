@@ -5,7 +5,6 @@ gem 'mysql2'
 gem 'bootstrap-sass', '2.0.0'
 gem 'bcrypt-ruby', '3.0.1'
 gem 'faker', '1.0.1'
-gem 'omniauth-cas'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -13,7 +12,6 @@ gem 'omniauth-cas'
 group :development, :test do
   gem 'rspec-rails', '2.10.0'
 end
-gem 'pg', '0.12.2'
 
 gem 'annotate', '~>2.4.1.beta', group: :development
 
